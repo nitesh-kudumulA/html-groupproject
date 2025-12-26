@@ -1,0 +1,38 @@
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+th, td {
+  text-align: left;
+  padding: 0.8rem;
+  border-bottom: 1px solid #ddd;
+}
+th {
+  background: rgb(173, 111, 111);
+  color: #fffaf3;
+}
+tr:hover {
+  background: #f4ece3;
+}
+.achievement-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+.achievement-card {
+  background: #fffaf3;
+  padding: 1rem;
+  border-left: 6px solid rgb(173, 111, 111);
+  border-radius: 8px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+h1{
+  background: rgb(173, 111, 111);
+  color: #fffaf3;
+  padding: 1.2rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}

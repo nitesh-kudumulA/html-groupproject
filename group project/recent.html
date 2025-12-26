@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="recent.css">
+</head>
+<body>
+     <h1>Recent Records</h1>
+      <table>
+        <thead>
+          <tr>
+            <th>Student</th>
+            <th>Activity</th>
+            <th>Category</th>
+            <th>Achievement</th>
+            <th>Date Of Achievement</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Riya Sharma</td>
+            <td>Basketball</td>
+            <td>Sports</td>
+            <td>Won Intercollege Championship</td>
+            <td>03-04-2025</td>
+          </tr>
+          <tr>
+            <td>Aditya Singh</td>
+            <td>Drama Club</td>
+            <td>Cultural</td>
+            <td>Best Actor Award</td>
+            <td>03-05-2025</td>
+          </tr>
+          <script>
+  window.addEventListener('DOMContentLoaded', () => {
+    const tbody = document.querySelector('tbody');
+    const records = JSON.parse(localStorage.getItem('recentAchievements')) || [];
+
+    records.forEach(record => {
+      const row = document.createElement('tr');
+      row.innerHTML = `
+        <td>${record.student}</td>
+        <td>${record.activity}</td>
+        <td>${record.category}</td>
+        <td>${record.details}</td>
+        <td>${record.date}</td>
+      `;
+      tbody.appendChild(row);
+    });
+  });
+</script>
+</body>
+</html>
